@@ -15,3 +15,16 @@ You can also make your life easier by adding the following to your shell config:
 ```
 alias kubectl="minikube kubectl --"
 ```
+## Remove unwanted Interfaces
+
+I was experiencing multi-interface issues: <br/>
+https://github.com/kubernetes/minikube/issues/13131
+```
+hostonlyif remove "VirtualBox Host-Only Ethernet Adapter"
+```
+After removing the interface, checked that it was removed before proceeding:
+```
+VBoxManage list hostonlyifs
+```
+
+![remove](https://github.com/nigeldouglas-itcarlow/local-k8s-lab-security/assets/126002808/079b4db4-bdb5-48d7-a1eb-26f334b0dca9)
