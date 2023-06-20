@@ -43,6 +43,11 @@ helm install falco falcosecurity/falco --namespace falco --create-namespace
 ```
 kubectl get pods -n falco -o wide -w
 ```
+
+Falco pod was slow initializing:
+![error](https://github.com/nigeldouglas-itcarlow/local-k8s-lab-security/assets/126002808/1ba52ff4-19cc-4c41-a25d-d8dbaf76bb91)
+
+
 Get the logs from the pod falco-rq4gs
 ```
 kubectl logs falco-rq4gs -n falco
