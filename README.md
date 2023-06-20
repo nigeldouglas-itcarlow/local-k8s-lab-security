@@ -28,3 +28,8 @@ VBoxManage list hostonlyifs
 ```
 
 ![remove](https://github.com/nigeldouglas-itcarlow/local-k8s-lab-security/assets/126002808/079b4db4-bdb5-48d7-a1eb-26f334b0dca9)
+
+## Installing helm via chocolatey
+
+![helm](https://github.com/nigeldouglas-itcarlow/local-k8s-lab-security/assets/126002808/2ff6b904-9b35-44ff-8c0d-94335a638b54)
+
