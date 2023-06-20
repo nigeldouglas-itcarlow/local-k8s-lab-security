@@ -33,3 +33,26 @@ VBoxManage list hostonlyifs
 
 ![helm](https://github.com/nigeldouglas-itcarlow/local-k8s-lab-security/assets/126002808/2ff6b904-9b35-44ff-8c0d-94335a638b54)
 
+## Install Falco
+```
+helm repo add falcosecurity https://falcosecurity.github.io/charts
+helm repo update
+helm install falco falcosecurity/falco --namespace falco --create-namespace
+```
+
+```
+kubectl get pods -n falco -o wide -w
+```
+Get the logs from the pod falco-rq4gs
+```
+kubectl logs falco-rq4gs -n falco
+```
+
+Mon Jan 30 10:56:26 2023: Falco version: 0.33.1 (x86_64)
+Mon Jan 30 10:56:26 2023: Falco initialized with configuration file: /etc/falco/falco.yaml
+Mon Jan 30 10:56:26 2023: Loading rules from file /etc/falco/falco_rules.yaml
+Mon Jan 30 10:56:26 2023: Loading rules from file /etc/falco/falco_rules.local.yaml
+Mon Jan 30 10:56:27 2023: The chosen syscall buffer dimension is: 8388608 bytes (8 MBs)
+Mon Jan 30 10:56:27 2023: Starting health webserver with threadiness 4, listening on port 8765
+Mon Jan 30 10:56:27 2023: Enabled event sources: syscall
+Mon Jan 30 10:56:27 2023: Opening capture with Kernel module
