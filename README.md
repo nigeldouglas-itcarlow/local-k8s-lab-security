@@ -116,10 +116,14 @@ falco_client.run()
 ![Screenshot 2023-06-22 at 13 59 57](https://github.com/nigeldouglas-itcarlow/local-k8s-lab-security/assets/126002808/c80a96fc-33a1-4619-b3b0-0dc70c0bf1a1)
 
 I need to ensure I have the necessary dependencies installed, including the ```falco-python``` library <br/>
+Seems after running the below command, there is no matching dependency called ```falco-python```
 
 ```
 pip install falco-python
 ```
+
+![Screenshot 2023-06-22 at 14 03 30](https://github.com/nigeldouglas-itcarlow/local-k8s-lab-security/assets/126002808/71af040b-4e4b-4e0b-83db-d8d895ab3dd2)
+
 
 I will also need to have Falco installed and properly configured on my system first <br/>
 <br/>
