@@ -113,6 +113,8 @@ falco_client.subscribe("output", lambda alert: handle_critical_alert(alert))
 falco_client.run()
 ```
 
+![Screenshot 2023-06-22 at 13 59 57](https://github.com/nigeldouglas-itcarlow/local-k8s-lab-security/assets/126002808/c80a96fc-33a1-4619-b3b0-0dc70c0bf1a1)
+
 I need to ensure I have the necessary dependencies installed, including the ```falco-python``` library <br/>
 
 ```
