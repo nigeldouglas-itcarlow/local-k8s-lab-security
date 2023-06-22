@@ -61,3 +61,30 @@ Mon Jan 30 10:56:27 2023: The chosen syscall buffer dimension is: 8388608 bytes 
 Mon Jan 30 10:56:27 2023: Starting health webserver with threadiness 4, listening on port 8765
 Mon Jan 30 10:56:27 2023: Enabled event sources: syscall
 Mon Jan 30 10:56:27 2023: Opening capture with Kernel module
+
+## Building a process killer workload
+
+There are already a variety of container images available that include Python and commonly used dependencies. <br/>
+One such example is the official Python Docker image, which provides a base image with Python pre-installed.  <br/>
+I could use different tags of the Python image to specify the Python version you need. I choice 3.9 as it is newer.
+
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: falco-alert-handler
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: falco-alert-handler
+  template:
+    metadata:
+      labels:
+        app: falco-alert-handler
+    spec:
+      containers:
+      - name: falco-alert-handler
+        image: python:3.9
+        command: ["python", "script.py"]
+```
